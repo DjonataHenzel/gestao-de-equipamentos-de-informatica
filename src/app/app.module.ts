@@ -10,6 +10,7 @@ import { EquipamentoComponent } from './equipamento/equipamento.component';
 import { ListagemComponent } from './equipamento/listagem/listagem.component';
 import { CadastroComponent } from './equipamento/cadastro/cadastro.component';
 import { DetalheComponent } from './equipamento/detalhe/detalhe.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DetalheComponent } from './equipamento/detalhe/detalhe.component';
   imports: [
     BrowserModule,
     CompartilhadoModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

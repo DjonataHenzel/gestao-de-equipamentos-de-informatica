@@ -6,6 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastro.component.css']
 })
 export class CadastroComponent implements OnInit {
+
+    numeroAtivo=""
+    tipoEquipamento=""
+    modelo=""
+    marca=""
+    configuracao=""
+    observacao=""
+    voltagem=""
+
   listaEquipamentos = [
     {
       id: 1,
@@ -21,6 +30,18 @@ export class CadastroComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(): void { }
+
+  limpar():void{
+    this.numeroAtivo="",
+    this.tipoEquipamento="",
+    this.modelo="",
+    this.marca="",
+    this.configuracao="",
+    this.observacao="",
+    this.voltagem=""
   }
 
 }
