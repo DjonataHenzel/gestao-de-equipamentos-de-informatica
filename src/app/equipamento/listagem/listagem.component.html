@@ -1,5 +1,3 @@
-<p>listagem works!</p>
-<h6>{{listaEquipamentos}}</h6>
 <table>
   <tr>
     <th>Numero Ativo</th>
@@ -17,7 +15,7 @@
     <td>{{equip.marca}}</td>
     <td>{{equip.voltagem}}</td>
     <td>{{equip.configuracoes}}</td>
-    <td>{{equip.observacao}}</td>
+    <td>{{equip.observacao | uppercase}}</td>
     <td><a [routerLink]="['../detalhe/',equip.id]"><span class="material-icons-outlined">image_search</span></a></td>
   </tr>
 

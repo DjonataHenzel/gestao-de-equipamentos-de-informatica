@@ -1,0 +1,4 @@
+{
+  "/equipamentos/:id": "/equipamentos?id=:id",
+  "/equipamentos/:nome": "/equipamentos?nome=:nome"
+}

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Equipamento } from 'src/app/model/equipamento';
+import { EquipamentoService } from '../equipamento.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -15,33 +17,40 @@ export class CadastroComponent implements OnInit {
     observacao=""
     voltagem=""
 
-  listaEquipamentos = [
-    {
-      id: 1,
-      numeroAtivo: '12345',
-      tipoEquipamento: 'Computador desktop',
-      modelo: 'AFD-34',
-      marca: 'dell',
-      voltagem: '127V',
-      configuracoes: 'SSD 240GB, 8GB de RAM, I3 10ªG',
-      observacao: 'apresentando problemas na fonta'
-    }]
+  equipamento!: Equipamento;
 
-  constructor() { }
+  listaEquipamentos:any= []
+
+  constructor(private equipamentoService: EquipamentoService) { }
 
   ngOnInit(): void {
+    this.listEquipamentos();
+    this.equipamento = new Equipamento('','','','','','','');
   }
 
-  onSubmit(): void { }
-
   limpar():void{
-    this.numeroAtivo="",
-    this.tipoEquipamento="",
-    this.modelo="",
-    this.marca="",
-    this.configuracao="",
-    this.observacao="",
-    this.voltagem=""
+    this.equipamento.numeroAtivo="",
+    this.equipamento.tipoEquipamento="",
+    this.equipamento.modelo="",
+    this.equipamento.marca="",
+    this.equipamento.configuracoes="",
+    this.equipamento.observacao="",
+    this.equipamento.voltagem=""
+  }
+
+  // apresentar lista de cadastros
+  listEquipamentos(){
+    this.equipamentoService.list().subscribe((response)=>{
+      this.listaEquipamentos = response;
+    });
+  }
+
+  // função para realizar o cadastro
+  onSubmit(){
+    this.equipamentoService.create(this.equipamento).subscribe((response)=>{
+      this.listEquipamentos();
+      this.limpar();
+    },(error=>{}));
   }
 
 }

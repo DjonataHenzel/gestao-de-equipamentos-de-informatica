@@ -11,6 +11,7 @@ import { ListagemComponent } from './equipamento/listagem/listagem.component';
 import { CadastroComponent } from './equipamento/cadastro/cadastro.component';
 import { DetalheComponent } from './equipamento/detalhe/detalhe.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     CompartilhadoModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [],

@@ -1,0 +1,44 @@
+{
+  "informatica": [
+    {
+      "id": 1,
+      "numeroAtivo": 12345,
+      "tipoEquipamento": "Computador desktop",
+      "modelo": "AFD-34",
+      "marca": "dell",
+      "voltagem": "127V",
+      "configuracoes": "SSD 240GB, 8GB de RAM, I3 10ªG",
+      "observacao": "apresentando problemas na fonta"
+    },
+    {
+      "id": 2,
+      "numeroAtivo": 345567,
+      "tipoEquipamento": "Notebook",
+      "modelo": "E51-354",
+      "marca": "Acer",
+      "voltagem": "220V",
+      "configuracoes": "SSD 480GB, 16GB de RAM, I5 10ªG",
+      "observacao": "Risco na tela"
+    },
+    {
+      "id": 3,
+      "numeroAtivo": 9562316,
+      "tipoEquipamento": "Macbook",
+      "modelo": "A2341-324",
+      "marca": "Sem marca",
+      "voltagem": "220V",
+      "configuracoes": "SSD 240GB, 12GB de RAM, I3 8ªG",
+      "observacao": "Teclado com defeito"
+    },
+    {
+      "numeroAtivo": "Djonata Diego Henzel",
+      "tipoEquipamento": "Djonata Diego Henzel",
+      "modelo": "Djonata Diego Henzel",
+      "marca": "Djonata Diego Henzel",
+      "voltagem": "Djonata Diego Henzel",
+      "configuracoes": "Djonata Diego Henzel",
+      "observacao": "Djonata Diego Henzel",
+      "id": 4
+    }
+  ]
+}
