@@ -17,7 +17,7 @@ import {
 
 export class HeaderComponent implements OnInit, AfterViewInit {
   @ViewChild('mobile') sideNav?: ElementRef;
-  logo = "assets/img/logo.png"
+  logo = "/assets/img/logo.png"
   constructor() {}
 
   ngOnInit(): void {}

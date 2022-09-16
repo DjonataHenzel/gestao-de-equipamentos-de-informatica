@@ -7,16 +7,14 @@ Este projeto tem como objetivo implementar um crud referente ao app para gerenci
 O frontend da aplicação foi desenvolvido com Angular e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
 
 ## Endereço de Deploy - GitHub Pages
-https://github.com/DjonataHenzel/gestao-de-equipamentos-de-informatica
+https://djonatahenzel.github.io/gestao-de-equipamentos-de-informatica/
 
 ## Protótipo
 https://www.figma.com/file/iNUDHz5epuzGkVRxApzxKE/Prot%C3%B3tipo---APP?node-id=1%3A2
 
 ## Tela
-- Login
 - Home
 - Cadastro de equipamento
-- Gerenciar equipamento
 
 ## Checklist
 [X] Criar o repositório no GitHub com a estrutura do Gitflow, ou seja, branches main e develop.
