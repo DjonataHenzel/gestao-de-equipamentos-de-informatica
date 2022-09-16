@@ -1,0 +1,22 @@
+<table>
+  <tr>
+    <th>Numero Ativo</th>
+    <th>Tipo equipamento</th>
+    <th>Modelo</th>
+    <th>Marca</th>
+    <th>Voltagem</th>
+    <th>Configurações</th>
+    <th>Observações</th>
+  </tr>
+  <tr *ngFor="let equip of listaEquipamentos">
+    <td>{{equip.numeroAtivo}}</td>
+    <td>{{equip.tipoEquipamento}}</td>
+    <td>{{equip.modelo}}</td>
+    <td>{{equip.marca}}</td>
+    <td>{{equip.voltagem}}</td>
+    <td>{{equip.configuracoes}}</td>
+    <td>{{equip.observacao | uppercase}}</td>
+    <td><a [routerLink]="['../detalhe/',equip.id]"><span class="material-icons-outlined">image_search</span></a></td>
+  </tr>
+
+</table>

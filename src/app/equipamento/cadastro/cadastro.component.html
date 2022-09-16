@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="section">
+    <div class="row">
+      <div class="col s12 l12 m3">
+        <div class="card horizontal z-depth-5">
+          <div class="card-stacked">
+            <div class="card-action">
+              <form #form="ngForm" (submit)="onSubmit()" novalidate class="row col s12 l12">
+                <div>
+                  <div class=" formGroup input-field col s12 l6">
+                    <input id="numeroAtivo" name="numeroAtivo" type="text" class="validate" [(ngModel)]="this.equipamento.numeroAtivo"
+                      pattern="(\s?[A-ZÀ-Ú][a-zà-ú])+(\s?([A-ZÀ-Ú]|[a-zà-ú]|-|\d))+" #nomeEqui="ngModel" required>
+                    <label for="numeroAtivo">Numero ativo*</label>
+                    <span [hidden]="nomeEqui.valid|| nomeEqui.untouched">
+                      Informe o numero do ativo!
+                    </span>
+                  </div>
+                  <div class=" formGroup input-field col s12 l6">
+                    <input id="tipoEquipamento" name="tipoEquipamento" type="text" class="validate"
+                      [(ngModel)]="this.equipamento.tipoEquipamento" pattern="(\s?[A-ZÀ-Ú][a-zà-ú])+(\s?([A-ZÀ-Ú]|[a-zà-ú]|-|\d))+"
+                      #nomeEqui="ngModel" required>
+                    <label for="tipoEquipamento">Tipo equipamento*</label>
+                    <span [hidden]="nomeEqui.valid|| nomeEqui.untouched">
+                      Informe o tipo do equipamento!
+                    </span>
+                  </div>
+                  <div class="input-field col s12 l6">
+                    <input id="modelo" name="modelo" type="text" class="validate" [(ngModel)]="this.equipamento.modelo" #model="ngModel"
+                      required>
+                    <label for="modelo">Modelo*</label>
+                    <span [hidden]="model.valid|| model.untouched">
+                      Informe o modelo!
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  <div class="input-field col s12 l6">
+                    <input id="marca" name="marca" type="text" required class="validate" [(ngModel)]="this.equipamento.marca"
+                      #series="ngModel" required>
+                    <label for="marca">Marca*</label>
+                    <span [hidden]="series.valid|| series.untouched">
+                      Informe a marca!
+                    </span>
+                  </div>
+                  <div class="input-field col s12 l6">
+                    <input id="configuracao" name="configuracao" type="text" class="validate" [(ngModel)]="this.equipamento.configuracoes"
+                      #fabri="ngModel" required>
+                    <label for="configuracao">Configurações*</label>
+                    <span [hidden]="fabri.valid|| fabri.untouched">
+                      Informe a configuração!
+                    </span>
+                  </div>
+                  <div class="input-field col s12 l6">
+                    <input id="voltagem" name="voltagem" type="text" class="validate" [(ngModel)]="this.equipamento.voltagem"
+                      #voltage="ngModel" required>
+                    <label for="voltagem">Voltagem*</label>
+                    <span [hidden]="fabri.valid|| fabri.untouched">
+                      Informe a voltagem!
+                    </span>
+                  </div>
+                  <div class="input-field col s12 l6">
+                    <input id="observacao" name="observacao" type="text" class="validate" [(ngModel)]="this.equipamento.observacao"
+                      #fabri="ngModel">
+                    <label for="observacao">Observação</label>
+                  </div>
+                </div>
+                <button type="submit" class="waves-effect waves-light btn red" [disabled]="!form.valid">Salvar</button>
+                <button type="button" class="waves-effect waves-light btn red" (click)="limpar()">Limpar dados</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-listagem [listaEquipamentos]="listaEquipamentos"></app-listagem>
