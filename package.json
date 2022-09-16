@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href=/gestao-de-laboratorio/",
-    "ghpages": "angular-cli-ghpages --dir=dist/gestao-de-laboratorio",
+    "build": "ng build --prod --base-href=/app-gestao-equipamento/",
+    "ghpages": "angular-cli-ghpages --dir=dist/app-gestao-equipamento",
     "deploy": "npm run build & npm run ghpages",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
