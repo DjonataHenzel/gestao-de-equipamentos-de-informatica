@@ -1,11 +1,11 @@
 {
-  "name": "app-gestao-equipamento",
+  "name": "gestao-de-equipamentos-de-informatica",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href=/app-gestao-equipamento/",
-    "ghpages": "angular-cli-ghpages --dir=dist/app-gestao-equipamento",
+    "build": "ng build --prod --base-href=/gestao-de-equipamentos-de-informatica/",
+    "ghpages": "angular-cli-ghpages --dir=dist/gestao-de-equipamentos-de-informatica",
     "deploy": "npm run build & npm run ghpages",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
